@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Spartan", sans-serif;
+    font-size: 12px;
+}
+.leftdiv:hover, .rightdiv:hover{
+    background-color: #444444;
+}
+nav .logo{
+    height: 20px;
+}
+li{
+    list-style: none;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+p{
+    color: #c6c6c6;
+}
+.shopbtn-div{
+    width: 265px;
+    display: flex;
+    cursor: pointer;
+}
+
+hr{
+    border: none;
+    border-top: 3px solid white;
+    width: 20px;
+    margin: 10px auto;
+}
+.arrows{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 376px){
+    .container{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(10, 10vw);
+        grid-template-rows: repeat(5, 20vh);
+        overflow: hidden;
+    } 
+    nav{
+        grid-column: 1/7;
+        grid-row: 1/4;
+        display: flex;
+        position: relative;
+        
+    }
+    nav .hero{
+        width: 60vw;
+        height: 60vh;
+    }
+    .home{
+        position: absolute;
+        margin: 80px 0 0 80px;
+    }
+   
+    nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        width: 400px;
+        position: absolute;
+        margin: 70px 0 0 30px;
+        left: 200px;
+    }
+    
+    
+    .discover{
+        grid-column: 7/11;
+        grid-row: 1/4;
+        padding: 110px 100px 150px;
+        position: relative;
+    }
+    .discover h1{
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        margin-left: 50px;
+    }
+    .discover p{
+        line-height: 1.5;
+        font-size: 16px;
+        margin-left: 50px;
+    }
+    svg{
+        margin-top: 35px;
+        margin-left: 20px;
+    }
+    
+    button{
+        cursor: pointer;
+        margin-top: 30px;
+        margin-left: 50px;
+        width: 200px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        letter-spacing: 10px;
+        color: black;
+    }
+    
+    .arrows{
+        width: 10vw;
+        height: 4vw;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .leftdiv,.rightdiv{
+        width: 5vw;
+        padding: 25px 0 0 35px;
+        justify-content: center;
+    }
+    .arrows img{
+        height: 30px;
+        margin: auto;
+       
+    }
+   
+    .aboutdiv{
+        grid-column: 4/8;
+        grid-row: 4/6;
+        padding: 130px 90px;
+    }
+    .aboutdiv h2{
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+    }
+    .aboutdiv p{
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    .about-dark{
+        grid-column: 1/4;
+        grid-row: 4/6;
+        height: 40vh;
+        width: 30vw;
+    }
+    .about-dark img{
+        height: 40vh;
+        width: 30vw;
+    }
+    .about-light{
+        grid-column: 8/11;
+        grid-row: 4/6;
+        height: 40vh;
+        width: 30vw;
+    }
+    .about-light img{
+        height: 40vh;
+        width: 30vw;
+    }
+    
+    
+}
+
+
+
+.hidden{
+    opacity: 0;
+}
+@media screen and (max-width: 375px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        height: 200vh;
+        width: 100vw;
+    }
+    nav{
+        grid-column: 1;
+        grid-row: 1/2;
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+    }
+    nav .hero{
+        height: 50vh;
+        width: 100vw;
+    }
+    nav ul{
+        position: relative;
+        width: 100vw;
+        display: none;
+    }
+    .discover{
+        grid-column: 1;
+        grid-row: 2/3;
+        height: 50vh;
+        padding: 20px 20px 10px ;
+        margin: 0;
+
+    }
+    .discover p{
+        margin-top: 20px;
+    }
+    .shopbtn-div{
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    button{
+        cursor: pointer;
+        width: 200px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        letter-spacing: 10px;
+        color: black;
+    }
+    svg{
+        margin-top: 5px;
+    }
+    .about-dark{
+        grid-column: 1;
+        grid-row: 3/4;
+        width: 100vw;
+        height: 25vh;
+    }
+    .about-dark img{
+        width: 100vw;
+        height: 25vh;
+    }
+    .aboutdiv{
+        grid-column: 1;
+        grid-row: 4/5;
+        height: 50vh;
+        padding: 80px 15px 10px;
+        margin: 0;
+    }
+    .aboutdiv p{
+        margin-top: 20px;
+    }
+    .about-light{
+        grid-column: 1;
+        grid-row: 5/6;
+        width: 100vw;
+        height: 25vh;
+    }
+    .about-light img{
+        width: 100vw;
+        height: 25vh;
+    }
+    .arrows{
+        grid-row: 1;
+        width: 100px;
+        display: flex;
+        position: absolute;
+        top: 46vh;
+        right: 0;
+    }
+    .leftdiv,.rightdiv{
+        width: 50px;
+        padding-left:20px ;
+        justify-content: center;
+    }
+    p{
+        font-size: 16px;
+    }
+}
